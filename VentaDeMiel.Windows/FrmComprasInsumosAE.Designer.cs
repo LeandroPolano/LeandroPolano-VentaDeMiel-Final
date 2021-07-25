@@ -31,6 +31,9 @@ namespace VentaDeMiel.Windows
         {
             this.components = new System.ComponentModel.Container();
             this.DatosDataGridView = new System.Windows.Forms.DataGridView();
+            this.CmlInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CmlCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CmlPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TextBoxCantidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,9 +48,6 @@ namespace VentaDeMiel.Windows
             this.label5 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.CmlInsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CmlCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CmlPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DatosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +71,30 @@ namespace VentaDeMiel.Windows
             this.DatosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DatosDataGridView.Size = new System.Drawing.Size(809, 392);
             this.DatosDataGridView.TabIndex = 11;
+            // 
+            // CmlInsumo
+            // 
+            this.CmlInsumo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CmlInsumo.HeaderText = "Insumo";
+            this.CmlInsumo.MinimumWidth = 6;
+            this.CmlInsumo.Name = "CmlInsumo";
+            this.CmlInsumo.ReadOnly = true;
+            // 
+            // CmlCantidad
+            // 
+            this.CmlCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CmlCantidad.HeaderText = "Cantidad";
+            this.CmlCantidad.MinimumWidth = 6;
+            this.CmlCantidad.Name = "CmlCantidad";
+            this.CmlCantidad.ReadOnly = true;
+            // 
+            // CmlPrecioUnitario
+            // 
+            this.CmlPrecioUnitario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CmlPrecioUnitario.HeaderText = "Precio Unitario";
+            this.CmlPrecioUnitario.MinimumWidth = 6;
+            this.CmlPrecioUnitario.Name = "CmlPrecioUnitario";
+            this.CmlPrecioUnitario.ReadOnly = true;
             // 
             // TextBoxCantidad
             // 
@@ -214,30 +238,6 @@ namespace VentaDeMiel.Windows
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // CmlInsumo
-            // 
-            this.CmlInsumo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CmlInsumo.HeaderText = "Insumo";
-            this.CmlInsumo.MinimumWidth = 6;
-            this.CmlInsumo.Name = "CmlInsumo";
-            this.CmlInsumo.ReadOnly = true;
-            // 
-            // CmlCantidad
-            // 
-            this.CmlCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CmlCantidad.HeaderText = "Cantidad";
-            this.CmlCantidad.MinimumWidth = 6;
-            this.CmlCantidad.Name = "CmlCantidad";
-            this.CmlCantidad.ReadOnly = true;
-            // 
-            // CmlPrecioUnitario
-            // 
-            this.CmlPrecioUnitario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CmlPrecioUnitario.HeaderText = "Precio Unitario";
-            this.CmlPrecioUnitario.MinimumWidth = 6;
-            this.CmlPrecioUnitario.Name = "CmlPrecioUnitario";
-            this.CmlPrecioUnitario.ReadOnly = true;
             // 
             // FrmComprasInsumosAE
             // 
