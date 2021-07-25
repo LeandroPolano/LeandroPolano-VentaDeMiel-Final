@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA821B6A-8AED-4F1E-80B4-C06DBDA8C9B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VentaDeMiel.Windows</RootNamespace>
+    <AssemblyName>VentaDeMiel.Windows</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmCapacidadesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCapacidadesAE.Designer.cs">
+      <DependentUpon>FrmCapacidadesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCapacidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCapacidades.Designer.cs">
+      <DependentUpon>FrmCapacidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCiudades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCiudades.Designer.cs">
+      <DependentUpon>FrmCiudades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCiudadesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCiudadesAE.Designer.cs">
+      <DependentUpon>FrmCiudadesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClientesDeMiel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientesDeMiel.Designer.cs">
+      <DependentUpon>FrmClientesDeMiel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClientesDeMielAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientesDeMielAE.Designer.cs">
+      <DependentUpon>FrmClientesDeMielAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClienteX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClienteX.Designer.cs">
+      <DependentUpon>FrmClienteX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmColmenaresAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmColmenaresAE.Designer.cs">
+      <DependentUpon>FrmColmenaresAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmColmenares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmColmenares.Designer.cs">
+      <DependentUpon>FrmColmenares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmColmenas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmColmenas.Designer.cs">
+      <DependentUpon>FrmColmenas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmColmenasAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmColmenasAE.Designer.cs">
+      <DependentUpon>FrmColmenasAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmComprasInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmComprasInsumos.Designer.cs">
+      <DependentUpon>FrmComprasInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmComprasInsumosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmComprasInsumosAE.Designer.cs">
+      <DependentUpon>FrmComprasInsumosAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEnvaseX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEnvaseX.Designer.cs">
+      <DependentUpon>FrmEnvaseX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstadosColmenas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadosColmenas.Designer.cs">
+      <DependentUpon>FrmEstadosColmenas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstadosColmenasAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadosColmenasAE.Designer.cs">
+      <DependentUpon>FrmEstadosColmenasAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInsumos.Designer.cs">
+      <DependentUpon>FrmInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInsumosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInsumosAE.Designer.cs">
+      <DependentUpon>FrmInsumosAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLocalidadX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalidadX.Designer.cs">
+      <DependentUpon>FrmLocalidadX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogoInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogoInicio.Designer.cs">
+      <DependentUpon>FrmLogoInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMarcasAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarcasAE.Designer.cs">
+      <DependentUpon>FrmMarcasAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarcas.Designer.cs">
+      <DependentUpon>FrmMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuPrincipal.Designer.cs">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMiel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMiel.Designer.cs">
+      <DependentUpon>FrmMiel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMielAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMielAE.Designer.cs">
+      <DependentUpon>FrmMielAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPaises.Designer.cs">
+      <DependentUpon>FrmPaises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPaisesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPaisesAE.Designer.cs">
+      <DependentUpon>FrmPaisesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductosAE.Designer.cs">
+      <DependentUpon>FrmProductosAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProductoX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductoX.Designer.cs">
+      <DependentUpon>FrmProductoX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProveedores.Designer.cs">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProveedoresAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProveedoresAE.Designer.cs">
+      <DependentUpon>FrmProveedoresAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProvincias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProvincias.Designer.cs">
+      <DependentUpon>FrmProvincias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProvinciasAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProvinciasAE.Designer.cs">
+      <DependentUpon>FrmProvinciasAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTiposDeProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTiposDeProductos.Designer.cs">
+      <DependentUpon>FrmTiposDeProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTiposDeProductosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTiposDeProductosAE.Designer.cs">
+      <DependentUpon>FrmTiposDeProductosAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTiposDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTiposDocumentos.Designer.cs">
+      <DependentUpon>FrmTiposDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTiposDocumentosAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTiposDocumentosAE.Designer.cs">
+      <DependentUpon>FrmTiposDocumentosAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTiposEnvases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTiposEnvases.Designer.cs">
+      <DependentUpon>FrmTiposEnvases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTiposEnvasesAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTiposEnvasesAE.Designer.cs">
+      <DependentUpon>FrmTiposEnvasesAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentas.Designer.cs">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentasAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentasAE.Designer.cs">
+      <DependentUpon>FrmVentasAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuFinal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuFinal.Designer.cs">
+      <DependentUpon>MenuFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCapacidades.resx">
+      <DependentUpon>FrmCapacidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCapacidadesAE.resx">
+      <DependentUpon>FrmCapacidadesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCiudades.resx">
+      <DependentUpon>FrmCiudades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCiudadesAE.resx">
+      <DependentUpon>FrmCiudadesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientesDeMiel.resx">
+      <DependentUpon>FrmClientesDeMiel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientesDeMielAE.resx">
+      <DependentUpon>FrmClientesDeMielAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClienteX.resx">
+      <DependentUpon>FrmClienteX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmColmenaresAE.resx">
+      <DependentUpon>FrmColmenaresAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmColmenares.resx">
+      <DependentUpon>FrmColmenares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmColmenas.resx">
+      <DependentUpon>FrmColmenas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmColmenasAE.resx">
+      <DependentUpon>FrmColmenasAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmComprasInsumos.resx">
+      <DependentUpon>FrmComprasInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmComprasInsumosAE.resx">
+      <DependentUpon>FrmComprasInsumosAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEnvaseX.resx">
+      <DependentUpon>FrmEnvaseX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadosColmenas.resx">
+      <DependentUpon>FrmEstadosColmenas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadosColmenasAE.resx">
+      <DependentUpon>FrmEstadosColmenasAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInsumos.resx">
+      <DependentUpon>FrmInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInsumosAE.resx">
+      <DependentUpon>FrmInsumosAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalidadX.resx">
+      <DependentUpon>FrmLocalidadX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogoInicio.resx">
+      <DependentUpon>FrmLogoInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarcas.resx">
+      <DependentUpon>FrmMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarcasAE.resx">
+      <DependentUpon>FrmMarcasAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuPrincipal.resx">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMiel.resx">
+      <DependentUpon>FrmMiel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMielAE.resx">
+      <DependentUpon>FrmMielAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPaises.resx">
+      <DependentUpon>FrmPaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPaisesAE.resx">
+      <DependentUpon>FrmPaisesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductosAE.resx">
+      <DependentUpon>FrmProductosAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductoX.resx">
+      <DependentUpon>FrmProductoX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProveedores.resx">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProveedoresAE.resx">
+      <DependentUpon>FrmProveedoresAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProvincias.resx">
+      <DependentUpon>FrmProvincias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProvinciasAE.resx">
+      <DependentUpon>FrmProvinciasAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiposDeProductos.resx">
+      <DependentUpon>FrmTiposDeProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiposDeProductosAE.resx">
+      <DependentUpon>FrmTiposDeProductosAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiposDocumentos.resx">
+      <DependentUpon>FrmTiposDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiposDocumentosAE.resx">
+      <DependentUpon>FrmTiposDocumentosAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiposEnvases.resx">
+      <DependentUpon>FrmTiposEnvases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiposEnvasesAE.resx">
+      <DependentUpon>FrmTiposEnvasesAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentas.resx">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentasAE.resx">
+      <DependentUpon>FrmVentasAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuFinal.resx">
+      <DependentUpon>MenuFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\Enum\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VentaDeMiel.BusinessLayer\VentaDeMiel.BusinessLayer.csproj">
+      <Project>{89F94F91-CB5C-4A78-9F53-4DF974C266F5}</Project>
+      <Name>VentaDeMiel.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VentaDeMiel.ServiceLayer\VentaDeMiel.ServiceLayer.csproj">
+      <Project>{6455BCA4-AF16-4F32-B523-062DA19DB01E}</Project>
+      <Name>VentaDeMiel.ServiceLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7d73420c16a5e3bb6393c788b931d012-fondo-degradado-de-nido-de-abeja.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3 sin título_20201123140459.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7 sin título_20201128232232.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3 sin título_202011231404591.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7 sin título_20201128232916.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20210216_000806.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Envase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1613512218977.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto-fondo-negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bc76e8c5fc0e507e81c8407f198c8cf7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sell Stock_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_basket_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sell_stock_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_document_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu final.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
