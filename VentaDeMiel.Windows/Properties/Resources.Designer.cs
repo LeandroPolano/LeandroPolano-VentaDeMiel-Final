@@ -283,6 +283,16 @@ namespace VentaDeMiel.Windows.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Menufff {
+            get {
+                object obj = ResourceManager.GetObject("Menufff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap producto {
             get {
                 object obj = ResourceManager.GetObject("producto", resourceCulture);

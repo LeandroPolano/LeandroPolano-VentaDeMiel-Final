@@ -39,6 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.CompraInsumoPanel = new System.Windows.Forms.Panel();
+            this.CantidadMiel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // ColmenarPanel
@@ -162,14 +163,26 @@
             this.CompraInsumoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CompraInsumoPanel_Paint);
             this.CompraInsumoPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CompraInsumoPanel_MouseClick);
             // 
+            // CantidadMiel
+            // 
+            this.CantidadMiel.BackColor = System.Drawing.Color.Transparent;
+            this.CantidadMiel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CantidadMiel.Location = new System.Drawing.Point(309, 211);
+            this.CantidadMiel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CantidadMiel.Name = "CantidadMiel";
+            this.CantidadMiel.Size = new System.Drawing.Size(243, 110);
+            this.CantidadMiel.TabIndex = 8;
+            this.CantidadMiel.Click += new System.EventHandler(this.CantidadMiel_Click);
+            // 
             // MenuFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::VentaDeMiel.Windows.Properties.Resources.Menu_final;
+            this.BackgroundImage = global::VentaDeMiel.Windows.Properties.Resources.Menufff;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1153, 607);
+            this.Controls.Add(this.CantidadMiel);
             this.Controls.Add(this.CompraInsumoPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -209,5 +222,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel CompraInsumoPanel;
+        private System.Windows.Forms.Panel CantidadMiel;
     }
 }

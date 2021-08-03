@@ -100,7 +100,7 @@ namespace VentaDeMiel.Windows
             // 
             this.TextBoxCantidad.Location = new System.Drawing.Point(99, 94);
             this.TextBoxCantidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.TextBoxCantidad.MaxLength = 100;
+            this.TextBoxCantidad.MaxLength = 5;
             this.TextBoxCantidad.Name = "TextBoxCantidad";
             this.TextBoxCantidad.Size = new System.Drawing.Size(193, 22);
             this.TextBoxCantidad.TabIndex = 26;
@@ -186,7 +186,7 @@ namespace VentaDeMiel.Windows
             // 
             this.txtPrecioUnitario.Location = new System.Drawing.Point(165, 165);
             this.txtPrecioUnitario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtPrecioUnitario.MaxLength = 100;
+            this.txtPrecioUnitario.MaxLength = 8;
             this.txtPrecioUnitario.Name = "txtPrecioUnitario";
             this.txtPrecioUnitario.Size = new System.Drawing.Size(127, 22);
             this.txtPrecioUnitario.TabIndex = 53;

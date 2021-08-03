@@ -244,6 +244,50 @@ namespace VentaDeMiel.Windows
                 valido = false;
                 errorProvider1.SetError(ComboBoxProveedor, "Debe seleccionar un Proveedor");
             }
+            if (ComboBoxProveedor.SelectedIndex == 0)
+            {
+                valido = false;
+                errorProvider1.SetError(ComboBoxProveedor, "Debe seleccionar un Proveedor");
+            }
+            if (comboBoxInsumo.SelectedIndex == 0)
+            {
+                valido = false;
+                errorProvider1.SetError(comboBoxInsumo, "Debe seleccionar un Insumo");
+            }
+            if (string.IsNullOrEmpty(TextBoxCantidad.Text) ||
+                string.IsNullOrWhiteSpace(TextBoxCantidad.Text))
+            {
+                valido = false;
+                errorProvider1.SetError(TextBoxCantidad, "Debe ingresar una Cantidad");
+            }
+            if (string.IsNullOrEmpty(txtPrecioUnitario.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecioUnitario.Text))
+            {
+                valido = false;
+                errorProvider1.SetError(txtPrecioUnitario, "Debe ingresar un Precio");
+            }
+            decimal precio;
+            if (!decimal.TryParse(txtPrecioUnitario.Text, out precio))
+            {
+                valido = false;
+                errorProvider1.SetError(txtPrecioUnitario, "Debe ingresar un Numero");
+            }
+            if (precio <= 0)
+            {
+                valido = false;
+                errorProvider1.SetError(txtPrecioUnitario, "Debe ingresar un Precio valido");
+            }
+            decimal cantidad;
+            if (!decimal.TryParse(TextBoxCantidad.Text, out cantidad))
+            {
+                valido = false;
+                errorProvider1.SetError(TextBoxCantidad, "Debe ingresar un Numero");
+            }
+            if (cantidad <= 0)
+            {
+                valido = false;
+                errorProvider1.SetError(TextBoxCantidad, "Debe ingresar una Cantidad valida");
+            }
             //if (lista.Count == 0)
             //{
             //    valido = false;

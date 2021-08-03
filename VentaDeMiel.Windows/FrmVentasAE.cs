@@ -214,9 +214,13 @@ namespace VentaDeMiel.Windows
                     venta.Cliente = (ClienteDeMiel)ComboBoxCliente.SelectedItem;
                     venta.Total = total;
                     venta.VentaProductos = lista;
-                    servicioVenta.Guardar(venta);
+                    if (validarCantidad(venta))
+                    {
+                        
+                        servicioVenta.Guardar(venta); 
                     frmVentas.AgregarFila(venta);
                     Close();
+                    }
                 }
                 catch (Exception exception)
                 {
@@ -224,6 +228,27 @@ namespace VentaDeMiel.Windows
                 }
             }
         }
+
+        private bool validarCantidad(Venta venta)
+        {
+            var valido = true;
+            errorProvider1.Clear();
+            decimal Cant = 0;
+            foreach (var vp in venta.VentaProductos)
+            {
+                var capacidad = decimal.Parse(vp.TipoEnvase.Capacidad.capacidad);
+                var MielCantidad = vp.Cantidad * capacidad;
+                Cant += MielCantidad;
+            }
+            CantidadMiel cantidadMiel = servicioCantidadMiel.GetCantidadMielPorId(1);
+            if (cantidadMiel.cantidadMiel < Cant)
+            {
+                valido = false;
+                errorProvider1.SetError(btnVender, "Debe ingresar una Cantidad que no sobrepase el stock");
+            }
+            return valido;
+        }
+
         private ServicioVenta servicioVenta = new ServicioVenta();
         private FrmVentas frmVentas;
 
@@ -236,12 +261,66 @@ namespace VentaDeMiel.Windows
                 valido = false;
                 errorProvider1.SetError(ComboBoxCliente, "Debe seleccionar un Cliente");
             }
-            //if (lista.Count == 0)
-            //{
-            //    valido = false;
-            //    errorProvider1.SetError(btnVender, "Debe ingresar un producto a la lista de venta");
-            //}
+            if (ComboBoxTipoEnvase.SelectedIndex == 0)
+            {
+                valido = false;
+                errorProvider1.SetError(ComboBoxTipoEnvase, "Debe seleccionar un Tipo De Envase");
+            }
+
+            if (string.IsNullOrEmpty(textBoxCantidad.Text) ||
+                string.IsNullOrWhiteSpace(textBoxCantidad.Text))
+            {
+                valido = false;
+                errorProvider1.SetError(textBoxCantidad, "Debe ingresar una Cantidad");
+            }
+            if (string.IsNullOrEmpty(textBoxPrecio.Text) ||
+                string.IsNullOrWhiteSpace(textBoxPrecio.Text))
+            {
+                valido = false;
+                errorProvider1.SetError(textBoxPrecio, "Debe ingresar un Precio");
+            }
+            decimal precio;
+            if (!decimal.TryParse(textBoxPrecio.Text, out precio))
+            {
+                valido = false;
+                errorProvider1.SetError(textBoxPrecio, "Debe ingresar un Numero");
+            }
+            if (precio <= 0)
+            {
+                valido = false;
+                errorProvider1.SetError(textBoxPrecio, "Debe ingresar un Precio valido");
+            }
+            decimal cantidad;
+            if (!decimal.TryParse(textBoxCantidad.Text, out cantidad))
+            {
+                valido = false;
+                errorProvider1.SetError(textBoxCantidad, "Debe ingresar un Numero");
+            }
+            if (cantidad <= 0)
+            {
+                valido = false;
+                errorProvider1.SetError(textBoxCantidad, "Debe ingresar una Cantidad valida");
+            }
+            if (lista.Count <= 0)
+            {
+                valido = false;
+                errorProvider1.SetError(btnVender, "Debe ingresar un producto a la lista de venta");
+            }
             return valido;
+        }
+        ServicioCantidadMiel servicioCantidadMiel= new ServicioCantidadMiel();
+
+        private void DatosDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4)
+            {
+                DataGridViewRow r = DatosDataGridView.Rows[e.RowIndex];
+                VentaProducto ventaProducto = (VentaProducto)r.Tag;
+                DatosDataGridView.Rows.RemoveAt(e.RowIndex);
+                lista.Remove(ventaProducto);
+                ActualizarTotal();
+
+            }
         }
     }
 }

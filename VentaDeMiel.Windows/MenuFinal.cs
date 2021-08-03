@@ -117,5 +117,16 @@ namespace VentaDeMiel.Windows
             FrmComprasInsumos frm = new FrmComprasInsumos();
             frm.ShowDialog(this);
         }
+
+        private void CantidadMiel_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void CantidadMiel_Click(object sender, EventArgs e)
+        {
+            FrmCantidadesMiel frm = new FrmCantidadesMiel();
+            frm.ShowDialog(this);
+        }
     }
 }

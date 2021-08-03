@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="ConexionBD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\RepositorioCantidadMiel.cs" />
     <Compile Include="Repositorios\RepositorioCapacidad.cs" />
     <Compile Include="Repositorios\RepositorioCiudad.cs" />
     <Compile Include="Repositorios\RepositorioClienteDeMiel.cs" />

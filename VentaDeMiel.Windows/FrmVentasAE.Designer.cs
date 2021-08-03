@@ -49,6 +49,7 @@
             this.CmnCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CmnPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnPesoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CmnBorrar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DatosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +63,8 @@
             this.CmnTipoEnvase,
             this.CmnCantidad,
             this.CmnPrecioUnitario,
-            this.cmnPesoTotal});
+            this.cmnPesoTotal,
+            this.CmnBorrar});
             this.DatosDataGridView.Location = new System.Drawing.Point(401, 11);
             this.DatosDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.DatosDataGridView.MultiSelect = false;
@@ -73,6 +75,7 @@
             this.DatosDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DatosDataGridView.Size = new System.Drawing.Size(580, 343);
             this.DatosDataGridView.TabIndex = 16;
+            this.DatosDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosDataGridView_CellClick);
             // 
             // btnCancelar
             // 
@@ -159,6 +162,7 @@
             // 
             this.textBoxCantidad.Location = new System.Drawing.Point(213, 98);
             this.textBoxCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCantidad.MaxLength = 5;
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(166, 22);
             this.textBoxCantidad.TabIndex = 85;
@@ -195,6 +199,7 @@
             // 
             this.textBoxPrecio.Location = new System.Drawing.Point(213, 168);
             this.textBoxPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxPrecio.MaxLength = 8;
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.Size = new System.Drawing.Size(166, 22);
             this.textBoxPrecio.TabIndex = 89;
@@ -246,6 +251,16 @@
             this.cmnPesoTotal.MinimumWidth = 6;
             this.cmnPesoTotal.Name = "cmnPesoTotal";
             this.cmnPesoTotal.ReadOnly = true;
+            // 
+            // CmnBorrar
+            // 
+            this.CmnBorrar.HeaderText = "";
+            this.CmnBorrar.Image = global::VentaDeMiel.Windows.Properties.Resources.close_window_96px;
+            this.CmnBorrar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.CmnBorrar.MinimumWidth = 6;
+            this.CmnBorrar.Name = "CmnBorrar";
+            this.CmnBorrar.ReadOnly = true;
+            this.CmnBorrar.Width = 40;
             // 
             // FrmVentasAE
             // 
@@ -303,5 +318,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CmnCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn CmnPrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnPesoTotal;
+        private System.Windows.Forms.DataGridViewImageColumn CmnBorrar;
     }
 }

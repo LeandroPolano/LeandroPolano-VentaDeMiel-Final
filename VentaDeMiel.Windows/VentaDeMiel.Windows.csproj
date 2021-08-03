@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCantidadesMiel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCantidadesMiel.Designer.cs">
+      <DependentUpon>FrmCantidadesMiel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCantidadesMielAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCantidadesMielAE.Designer.cs">
+      <DependentUpon>FrmCantidadesMielAE.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCapacidadesAE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +324,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCantidadesMiel.resx">
+      <DependentUpon>FrmCantidadesMiel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCantidadesMielAE.resx">
+      <DependentUpon>FrmCantidadesMielAE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCapacidades.resx">
       <DependentUpon>FrmCapacidades.cs</DependentUpon>
     </EmbeddedResource>
@@ -545,6 +563,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Menu final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menufff.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

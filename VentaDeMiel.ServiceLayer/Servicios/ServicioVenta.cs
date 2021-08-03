@@ -16,6 +16,7 @@ namespace VentaDeMiel.ServiceLayer.Servicios
         private RepositorioCiudad repositorioCiudad;
         private RepositorioTipoDocumento repositorioTipoDocumento;
         private RepositorioVentaProducto repositorioVentaProducto;
+        private RepositorioCantidadMiel repositorioCantidadMiel;
 
         private ConexionBD _conexion;
         public Venta GetVentaPorId(decimal id)
@@ -46,15 +47,21 @@ namespace VentaDeMiel.ServiceLayer.Servicios
 
         public void Guardar(Venta venta)
         {
+            decimal cantidad = 0;
             _conexion = new ConexionBD();
             _repositorioVenta = new RepositorioVenta(_conexion.AbrirConexion());
+            repositorioCantidadMiel = new RepositorioCantidadMiel(_conexion.AbrirConexion());
             repositorioVentaProducto = new RepositorioVentaProducto(_conexion.AbrirConexion()) ;
             _repositorioVenta.Guardar(venta);
             foreach (var vp in venta.VentaProductos)
             {
                 vp.Venta = venta;
                 repositorioVentaProducto.Guardar(vp);
+                var capacidad =decimal.Parse(vp.TipoEnvase.Capacidad.capacidad);
+                var MielCantidad = vp.Cantidad * capacidad;
+                cantidad += MielCantidad;
             }
+            repositorioCantidadMiel.Guardar(-cantidad);
             _conexion.CerrarConexion();
         }
 

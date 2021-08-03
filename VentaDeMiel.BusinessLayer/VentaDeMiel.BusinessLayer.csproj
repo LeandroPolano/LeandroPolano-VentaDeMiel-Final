@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\CantidadMiel.cs" />
     <Compile Include="Entities\Capacidad.cs" />
     <Compile Include="Entities\Ciudad.cs" />
     <Compile Include="Entities\ClienteDeMiel.cs" />

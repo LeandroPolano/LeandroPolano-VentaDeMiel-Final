@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\ServicioCantidadMiel.cs" />
     <Compile Include="Servicios\ServicioCapacidad.cs" />
     <Compile Include="Servicios\ServicioCiudad.cs" />
     <Compile Include="Servicios\ServicioClienteDeMiel.cs" />
